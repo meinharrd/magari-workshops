@@ -1,0 +1,5 @@
+* add and configure redis cookbook (may be broken)
+* configure couchdb
+* add and configure mongodb
+* add silex branch
+* add dummy project configuration (/usr/local/etc/app)

@@ -6,7 +6,7 @@ Vagrant VM with composer git nginx mysql php redis set up for development
 Usage
 -----
 
-** TODO replace mock section **
+**TODO replace mock section**
 
 * clone repository
 * install dependencies
