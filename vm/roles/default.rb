@@ -56,6 +56,7 @@ run_list(
   "recipe[apt]",
   "recipe[build-essential]",
   "recipe[ntp]",
+  "recipe[git]",
   #"recipe[mysql::percona_repo]",
   "recipe[mysql]",
   "recipe[mysql::ruby]",

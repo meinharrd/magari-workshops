@@ -33,3 +33,5 @@ cookbook "couchdb"
 cookbook "mongodb"
 
 cookbook "nginx"
+
+cookbook "git"

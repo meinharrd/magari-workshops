@@ -1,7 +1,14 @@
 php_sandbox
 ===========
 
-Vagrant VM with composer git nginx mysql php redis set up for development
+Vagrant VM serving
+* composer
+* git
+* nginx
+* mysql
+* php
+* redis
+* phpmyadmin
 
 Usage
 -----
@@ -25,7 +32,7 @@ Requirements
 
 * Vagrant 1.3+
 * VirtualBox
-* ruby gems
+* ruby gems (and ruby-dev)
 * chef solo
 
 VM is tested on *nix with 64bit architecture (recent MacOSX and Ubuntu).
@@ -36,17 +43,14 @@ Third party utils used
 ----------------------
 
 * various opscode cookbooks
-* foobugs php cookbook (PHP 5-4 and 5.5)
+* foobugs php cookbook (PHP 5.4 and 5.5)
 * knife and knife-solo
 * librarian-chef
 
 Roadmap
 -------
 
-* setup was tested locally but cleanup needed for initial release
 * need to document further
-* need tp discuss directory layout
-* need to discuss nginx sites
 * need to discuss data installer
 * should migrate some php scripts to bash (low priority)
 * should add support for chef environment
