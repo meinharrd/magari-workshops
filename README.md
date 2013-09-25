@@ -6,6 +6,7 @@ PHP VM with pre-installed cookbooks and vendors (dev).
     vagrant up
     vagrant ssh
     cd /vagrant
+    composer install
     app/console doctrine:database:create
 
 App is accessable from http://localhost:8080/ and PhpMyAdmin from http://localhost:8080/phpmyadmin.
