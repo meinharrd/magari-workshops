@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # quick fix for permissions
-  config.vm.synced_folder "./", "/vagrant", :id => "vagrant-root", :mount_options => ["dmode=777", "fmode=766"]
+  config.vm.synced_folder "./", "/vagrant", :id => "vagrant-root", :group => "www-data", :mount_options => ["dmode=775", "fmode=764"]
   
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "512"]
@@ -25,5 +25,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.cookbooks_path = ["vm/cookbooks", "vm/site-cookbooks"]
     chef.roles_path = "vm/roles"
     chef.add_role "default"
+  end
+
+  config.vm.provision :shell do |shell|
+    shell.inline = "sed -i 's/user = www-data/user = vagrant/' /etc/php5/fpm/pool.d/www.conf && service php5-fpm restart"
   end
 end

@@ -45,9 +45,7 @@ default_attributes({
     {
       "date.timezone"=> "UTC",
       "opcache.revalidate_freq"=> 2
-    },
-    "fpm_user" => "vagrant",
-    "fpm_group" => "vagrant"
+    }
   }
 })
 
