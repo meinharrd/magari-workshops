@@ -3,9 +3,9 @@ description "php sandbox role."
 
 default_attributes({
   "apt" => {
-    },
-    "build-essential" => {
-    },
+   },
+   "build-essential" => {
+   },
   "mysql" => {
     "server_debian_password" => "",
     "server_root_password" => "",
@@ -57,12 +57,13 @@ run_list(
   "recipe[build-essential]",
   "recipe[ntp]",
   "recipe[git]",
+  # optionally use percona (requires server packages config on ubuntu)
   #"recipe[mysql::percona_repo]",
-  "recipe[mysql]",
-  "recipe[mysql::ruby]",
   "recipe[mysql::server]",
-  "recipe[database]",
-  "recipe[database::mysql]",
+  # database::mysql recipe may break provisioning
+  #"recipe[mysql::ruby]",
+  #"recipe[database]",
+  #"recipe[database::mysql]",
   "recipe[nginx]",
   #"recipe[couchdb]",
   "recipe[php::fpm]",

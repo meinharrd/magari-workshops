@@ -15,27 +15,29 @@ server {
         log_not_found off;
         access_log off;
     }
-    # Make sure files with the following extensions do not get loaded by nginx because nginx would display the source code, and these files can contain PASSWORDS!
-    location ~* \.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)$|^(\..*|Entries.*|Repository|Root|Tag|Template)$|\.php_ {
-        deny all;
-    }
-    # Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
+    # Deny all attempts to access hidden files such as .htaccess, .htpasswd
     location ~ /\. {
         deny all;
         access_log off;
         log_not_found off;
     }
-    location ~*  \.(jpg|jpeg|png|gif|css|js|ico)$ {
-        expires max;
-        log_not_found off;
+    #site root is redirected to the app boot script
+    location = / {
+        try_files @site @site;
     }
+    #all other locations try other files first and go to our front controller if none of them exists
+    location / {
+        try_files $uri $uri/ @site;
+    } 
     location ~ \.php$ {
-        try_files $uri =404;
-        fastcgi_pass unix:/var/run/php5-fpm.sock;
-        fastcgi_split_path_info ^(.+\.php)(/.*)$;
-        include fastcgi_params;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        return 404;
     }
+    location @site {
+         fastcgi_pass unix:/var/run/php5-fpm.sock;
+         include fastcgi_params;
+         fastcgi_split_path_info ^(.+\.php)(/.*)$;
+         fastcgi_param  SCRIPT_FILENAME $document_root/index.php;
+    } 
     # nginx
     location /nginx_status {
         stub_status on;
