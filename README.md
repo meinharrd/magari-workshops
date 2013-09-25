@@ -1,3 +1,6 @@
+magari-workshops
+================
+
 PHP VM with pre-installed cookbooks and vendors (dev).
 
     vagrant up
