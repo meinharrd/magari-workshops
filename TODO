@@ -2,3 +2,5 @@
 * configure couchdb
 * add and configure mongodb
 * fix apt-get update issue with database::mysql recipe
+* fix eb/app_dev.php accessibility
+* fix permissions for synced folder

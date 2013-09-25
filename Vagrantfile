@@ -10,8 +10,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :private_network, ip: "192.168.104.63"
   config.vm.hostname = "sandbox-vm"
   # config.ssh.forward_agent = true
-  
-  config.vm.synced_folder "./", "/usr/local/share/app"
+
+  # quick fix for permissions
+  config.vm.synced_folder "./", "/usr/local/share/app", :id => "vagrant-root", :group => "www-data", :mount_options => ["dmode=775", "fmode=764"]
   
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "512"]
