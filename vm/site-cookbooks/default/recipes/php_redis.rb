@@ -23,10 +23,4 @@ when "debian"
     to "/etc/php5/mods-available/redis.ini"
     action :create
   end
-
-  link "/etc/php5/cli/conf.d/20-redis.ini" do
-    link_type :symbolic
-    to "/etc/php5/mods-available/redis.ini"
-    action :create
-  end
 end

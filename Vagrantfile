@@ -18,7 +18,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   
   config.vm.provision :shell do |shell|
-    shell.inline = "gem install chef --version 11.6.0 --no-document --conservative"
+    shell.inline = "apt-get update"
+    shell.inline = "gem install chef --version 11.6.0 --no-ri --no-rdoc --conservative"
   end
 
   config.vm.provision :chef_solo do |chef|
