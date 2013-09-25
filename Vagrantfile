@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # quick fix for permissions
-  config.vm.synced_folder "./", "/usr/local/share/app", :id => "vagrant-root", :group => "www-data", :mount_options => ["dmode=775", "fmode=764"]
+  config.vm.synced_folder "./", "/vagrant", :id => "vagrant-root", :mount_options => ["dmode=777", "fmode=766"]
   
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "512"]
