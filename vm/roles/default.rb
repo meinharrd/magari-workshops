@@ -40,7 +40,7 @@ default_attributes({
   },
 
   "php" => {
-    "install_method"=> "package_php54",
+    "install_method"=> "package_php55",
     "directives"=>
     {
       "date.timezone"=> "UTC",
