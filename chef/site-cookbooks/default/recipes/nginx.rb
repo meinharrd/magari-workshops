@@ -1,8 +1,3 @@
-#
-# Cookbook Name:: default
-# Recipe:: nginx
-#
-
 template "#{node['nginx']['dir']}/sites-available/node" do
   source "node.erb"
   owner "root"
