@@ -1,6 +1,9 @@
 magari-workshops
 ================
 
+asd
+asdasd
+
 PHP VM with pre-installed cookbooks and vendors (dev).
 
 After cloning do the following:
@@ -18,3 +21,5 @@ Composer and PHPUnit are installed. Unit tests can be executed via:
 
     cd /vagrant
     vendor/bin/phpunit -c app
+
+hmmm
