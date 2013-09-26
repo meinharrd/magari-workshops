@@ -3,6 +3,8 @@ magari-workshops
 
 PHP VM with pre-installed cookbooks and vendors (dev).
 
+After cloning do the following:
+
     cd magari-workshops
     vagrant up
     vagrant ssh
@@ -10,6 +12,9 @@ PHP VM with pre-installed cookbooks and vendors (dev).
     composer install
     app/console doctrine:database:create
 
-App is accessable from http://localhost:8080/ and PhpMyAdmin from http://localhost:8080/phpmyadmin.
+The Symfony application is now accessable via [http://localhost:8080/](http://localhost:8080/) and phpMyAdmin via [http://localhost:8080/phpmyadmin/](http://localhost:8080/phpmyadmin/).
 
-Composer and phpunit are installed. Unit-tests can be executed by `(cd /vagrant && vendor/bin/phpunit -c app)`.
+Composer and PHPUnit are installed. Unit tests can be executed via:
+
+    cd /vagrant
+    vendor/bin/phpunit -c app
