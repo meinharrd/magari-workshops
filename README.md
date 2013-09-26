@@ -18,3 +18,5 @@ Composer and PHPUnit are installed. Unit tests can be executed via:
 
     cd /vagrant
     vendor/bin/phpunit -c app
+
+hmmm
