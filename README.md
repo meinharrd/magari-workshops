@@ -1,6 +1,9 @@
 magari-workshops
 ================
 
+asd
+asdasd
+
 PHP VM with pre-installed cookbooks and vendors (dev).
 
 After cloning do the following:
