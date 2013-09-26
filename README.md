@@ -3,6 +3,7 @@ magari-workshops
 
 PHP VM with pre-installed cookbooks and vendors (dev).
 
+    cd magari-workshops
     vagrant up
     vagrant ssh
     cd /vagrant
