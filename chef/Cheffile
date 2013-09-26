@@ -1,0 +1,10 @@
+site 'http://community.opscode.com/api/v1'
+
+cookbook "git"
+
+cookbook "php",
+   :git => 'https://github.com/foobugs-cookbooks/php'
+
+cookbook "nginx"
+
+cookbook 'apache2'

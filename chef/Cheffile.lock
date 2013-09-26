@@ -1,0 +1,51 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apache2 (1.7.0)
+    apt (2.1.1)
+    build-essential (1.4.2)
+    chef_handler (1.1.4)
+    dmg (2.0.0)
+    git (2.6.0)
+      build-essential (>= 0.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 1.0.0)
+      windows (>= 0.0.0)
+      yum (>= 0.0.0)
+    mysql (3.0.4)
+      build-essential (> 1.1.0)
+      openssl (>= 0.0.0)
+    nginx (1.8.0)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      ohai (>= 1.1.4)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+    ohai (1.1.12)
+    openssl (1.1.0)
+    runit (1.2.0)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
+    windows (1.10.0)
+      chef_handler (>= 0.0.0)
+    xml (1.1.2)
+      build-essential (>= 0.0.0)
+    yum (2.3.2)
+
+GIT
+  remote: https://github.com/foobugs-cookbooks/php
+  ref: master
+  sha: 293b2c825a41a0bad513e3b7e7bbed8c6ee5ba57
+  specs:
+    php (1.1.0)
+      apt (>= 0.0.0)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
+
+DEPENDENCIES
+  apache2 (>= 0)
+  git (>= 0)
+  nginx (>= 0)
+  php (>= 0)
+
