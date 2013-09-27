@@ -9,6 +9,7 @@ checkout:
 database:
   post:
     - app/console doctrine:schema:create
+    - app/console doctrine:fixtures:load --no-interaction --fixtures=src/Acme/DemoBundle/DataFixtures/ORM/
 test:
   override:
     - phpunit -c app
