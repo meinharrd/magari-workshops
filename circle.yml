@@ -3,9 +3,11 @@ machine:
     UTC
   php:
     version: 5.4.15
+checkout:
+  post:
+    - cp app/config/parameters.yml.circle app/config/parameters.yml
 database:
   post:
-    - app/console doctrine:database:create
     - app/console doctrine:schema:create
 test:
   override:
