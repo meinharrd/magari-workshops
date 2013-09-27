@@ -1,0 +1,8 @@
+machine:
+  timezone:
+    UTC
+  php:
+    version: 5.4.15
+test:
+  override:
+    - phpunit -c app
