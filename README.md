@@ -13,6 +13,7 @@ After cloning do the following:
     cd /vagrant
     composer install
     app/console doctrine:database:create
+    app/console doctrine:schema:create
 
 The Symfony application is now accessable via [http://localhost:8080/](http://localhost:8080/) and phpMyAdmin via [http://localhost:8080/phpmyadmin/](http://localhost:8080/phpmyadmin/) (MySQL username: root, no password).
 
