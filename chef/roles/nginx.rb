@@ -9,7 +9,10 @@ default_attributes({
   "php" => {
     "install_method" => "package_php55",
     "directives" => {
-      "date.timezone" => "UTC"
+      "date.timezone" => "UTC",
+      "error_reporting" => "E_ALL",
+      "display_errors" => "On",
+      "display_startup_errors" => "On"
     }
   }
 })
@@ -22,5 +25,6 @@ run_list(
   "recipe[default]",
   "recipe[nginx]",
   "recipe[php]",
-  "recipe[php::fpm55]"
+  "recipe[php::fpm55]",
+  "recipe[php::composer]"
 )
