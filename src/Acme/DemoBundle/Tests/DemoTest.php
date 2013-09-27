@@ -12,6 +12,9 @@ class DemoTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($sum, $num1 + $num2);
     }
 
+    /**
+     * TODO: fixme
+     */
     public function getNumbers()
     {
         return array(
